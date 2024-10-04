@@ -10,7 +10,7 @@ class Department(models.Model):
         return self.name
 
 class Employee(models.Model):
-    name = models.CharField(max_length=25)  
+    name = models.CharField(max_length=25, unique=True)  
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='employees')
     address = models.TextField()
 

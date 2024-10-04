@@ -18,11 +18,12 @@ export const createEmployee = createAsyncThunk(
                 return result;
             }
             else {
-                toast.error("Error Creating Employee")
+                // toast.error("Error Creating Employee")
                 throw new Error("Error")
             }
         }
         catch (err) {
+            console.log(err)
             toast.error("Error Creating Employee")
             throw new Error("Error")
         }
