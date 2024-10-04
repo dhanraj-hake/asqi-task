@@ -21,7 +21,6 @@ class EmployeeView(APIView):
 
 
     def post(self, request, *args, **kwargs):
-        # return Response({}, status=status.HTTP_400_BAD_REQUEST)
         try:
             emp = CreateEmployeeSerializer(data=request.data)
             if emp.is_valid(raise_exception=True):

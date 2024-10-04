@@ -13,16 +13,6 @@ class EmployeeSerializer(serializers.ModelSerializer):
         model = Employee
         fields = "__all__"
 
-
-    # def validate_name(self, name):
-
-    #     name_exists = Employee.objects.filter(name=name).exists()
-
-    #     if name_exists:
-            
-
-    #     return name
-
 class CreateEmployeeSerializer(serializers.ModelSerializer):
 
     class Meta:
